@@ -12,4 +12,4 @@ The game consists in simulating the generations of a certain number of cells and
 
 So, the game have to show exactly the way that the generations advances by the agreement of these rules.
 
-IMPORTANT : The coments of this program is in Portuguese-Brazil Language. If you still have any doubts, send me an message and I'll try to solve it for you.
+IMPORTANT : The general language of this program is in Portuguese-Brazil Language. If you still have any doubts, send me an message and I'll try to solve it for you.
