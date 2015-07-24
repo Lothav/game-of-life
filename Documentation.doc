@@ -1,0 +1,36 @@
+Documentação do Trabalho Prático de AEDS I
+Nome : Ronald Davi Rodrigues Pereira
+
+1.	Introdução
+Saber como manipular matrizes é um dos conceitos mais importantes no curso de Ciência da Computação. Pois, a maioria dos problemas que podem ser computados são expressos em matrizes.
+O jogo “Jogo da Vida”, criado por John Horton Conway em 1970, é um modelo computacional de utilizações de matrizes aplicadas a um contexto. Portanto, esse trabalho prático desempenha um importante papel no aprendizado para os alunos iniciantes na programação.
+
+2.	Implementação
+O programa, em sua totalidade, é composto por apenas 5 funções, sendo elas:
+I.	int **alocaMatriz(int l, int c): Recebe as duas dimensões da matriz e a aloca em um espaço da memória, utilizando a função calloc (aloca e zera os valores no endereço da memória alocada), retornando um ponteiro de ponteiro para ser utilizado para a fixação posterior da matriz.
+II.	int **liberaMatriz(int l, int c, int **m): Como as matrizes foram anteriormente alocadas, é necessário liberar o espaço da memória do computador para ser utilizada por outros processos. Desse modo, não prejudica o desempenho do computador e retornando ao final um ponteiro de valor nulo (null).
+III.	void imprime(int **matriz, int l, int c): Imprime na tela do usuário o esquema do desenho da geração atual em que ele está, decodificando os “1” como      , “0” como espaços em branco e delimitando o espaço do tabuleiro da matriz.
+IV.	char pergunta(): Interação com o usuário a partir da pergunta de continuação com o avanço das gerações e retorna a resposta em letra maiúscula, através da função toupper.
+V.	int main(): A função principal do programa. É ela que chama todas as outras funções e passa os parâmetros para elas. Nela, acontece a abertura dos arquivos, a chamada das outras funções, a execução de toda a lógica do programa e a criação de um novo arquivo texto (.txt) com a última geração.
+
+3.	Lógica algorítmica
+O código, apesar de estar bem comentado, contem uma lógica que não foi comentada no código fonte, que é a criação das matrizes para serem utilizadas para a comparação das regras do jogo. Ao tentar implementar o código pela primeira vez, me deparei com uma dificuldade: As bordas das matrizes teriam que ser analisadas separadamente, pois as quantidades de seus vizinhos se diferenciavam dos demais.
+Desse modo, após alguns esquemas manuscritos, descobri uma forma de tornar a comparação das posições das matrizes de uma forma geral: Incluir nas bordas (superior, laterais e inferior) um conjunto de números “0”, pois não alterariam os valores dos resultados e possibilitariam um maior aproveitamento das iterações de um caso geral e aplicável para todas as posições da matriz. Logo, o acesso da matriz central seria possível a partir de uma negligenciação dos “0” nas bordas.
+Com isso, foi criado uma matriz, que contem os valores dos vizinhos vivos de acordo com cada posição da matriz anterior. Logo após, essa matriz é traduzida em uma outra, respeitando as regras impostas pelo jogo, e gerando a matriz da próxima geração a partir de condições (“if”).
+
+4.	Teste
+Arquivo de entrada:
+3 4  --> Dimensões da matriz de entrada (linhas e colunas)
+0 1 0 1
+1 1 0 1
+1 0 1 0
+Após uma geração:
+1 1 0 0     -->  A célula vermelha morreu devido à regra 1
+1 0 0 1     -->  A célula verde morreu devido à regra 2
+1 0 1 0     -->  A célula azul se tornou viva devido à regra 3
+Após duas gerações:
+1 1 0 0    -->   A célula laranja continuou viva devido à regra 4
+1 0 1 0
+0 1 0 0
+Após isso, não há mais modificações nas gerações posteriores.
+Com isso, pela observância das regras do “Jogo da Vida”, percebe-se que os casos explícitos nesse caso de teste - e em muitos outros não presentes na documentação – a lógica do programa se executou corretamente e cumpriu com o enunciado do trabalho prático, alcançando o resultado esperado.
