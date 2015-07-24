@@ -13,3 +13,7 @@ The game consists in simulating the generations of a certain number of cells and
 So, the game have to show exactly the way that the generations advances by the agreement of these rules.
 
 IMPORTANT : The general language of this program is in Portuguese-Brazil Language. If you still have any doubts, send me an message and I'll try to solve it for you.
+
+To compilate the program use the terminal command on Linux : gcc JogoDaVida.c -o gameoflife
+
+To run the program, make sure the "primeira-g.txt" is in the same directory of the code "JogoDaVida.c" and run in terminal command : ./gameoflife
