@@ -1,4 +1,5 @@
 # Game-of-Life
+
 Non-player game written in C Language.
 
 Idea of the game made by John Horton Conway and remade by me
@@ -14,6 +15,6 @@ So, the game have to show exactly the way that the generations advances by the a
 
 IMPORTANT : The general language of this program is in Portuguese-Brazil Language. If you still have any doubts, send me an message and I'll try to solve it for you.
 
-To compilate the program use the terminal command on Linux : gcc JogoDaVida.c -o gameoflife
+To compile the program use the terminal command on Linux : gcc gameoflife.c -o gameoflife.out
 
-To run the program, make sure the "primeira-g.txt" is in the same directory of the code "JogoDaVida.c" and run in terminal command : ./gameoflife
+To execute the program, make sure the "primeira-g.txt" is in the same directory of the code "gameoflife.c" and run in terminal command : ./gameoflife.out
