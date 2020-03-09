@@ -76,13 +76,13 @@ void imprime(int **matriz, int l, int c){ //Função para imprimir na tela a ger
 }
 
 char pergunta(){
-	char choise;
+	char choice;
 
 	printf("Deseja simular uma nova geracao?(s/n)\n> ");
-	scanf(" %c", &choise);
-	choise = toupper(choise);
+	scanf(" %c", &choice);
+	choise = toupper(choice);
 
-	return (choise);
+	return (choice);
 }
 
 int main(){
