@@ -142,7 +142,7 @@ int main()
 
     imprime(at, lin, col); //Imprime a geração atual
 
-    while (1)
+    while (true)
     {
         escolha = pergunta(); //Interação com o usuário sobre o avanço da geração
         // escolha = 'S';
@@ -213,5 +213,5 @@ int main()
 
     fclose(primeira_geracao); //Fecha o arquivo de entrada
     fclose(ultima_geracao);   //Fecha o arquivo da última geração
-    return (0);
+    return 0;
 }
